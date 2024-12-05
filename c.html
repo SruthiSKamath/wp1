@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bio Data & Resume</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+    .container {
+      width: 100%;
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      background-color: #eab6b6;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .buttons {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: #007BFF;
+      color: white;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .content {
+      display: none;
+    }
+    h1, h2, h3 {
+      color: #333;
+    }
+    .section {
+      margin: 20px 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    table th, table td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    table th {
+      background-color: #007BFF;
+      color: white;
+    }
+    footer {
+      text-align: center;
+      padding: 10px 0;
+      background-color: #f1f1f1;
+      font-size: 12px;
+      margin-top: 20px;
+    }
+    .profile {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .profile img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-right: 15px;
+    }
+    .profile h2 {
+      margin: 0;
+    }
+    #biodata {
+      background-color: #d4e9f9;
+      padding: 20px;
+      border-radius: 5px;
+    }
+  </style>
+  <script>
+    function showContent(type) {
+      document.getElementById('biodata').style.display = 'none';
+      document.getElementById('resume').style.display = 'none';
+      document.getElementById(type).style.display = 'block';
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome</h1>
+    <p>Select an option to view:</p>
+    <div class="buttons">
+      <button onclick="showContent('biodata')">Bio Data</button>
+      <button onclick="showContent('resume')">Resume</button>
+    </div>
+
+    <div id="biodata" class="content">
+      <div class="profile">
+        <img src="image.jpg" alt="Profile Picture">
+        <h2>Sruthi K S</h2>
+      </div>
+      <h2>Bio Data</h2>
+      <div class="section">
+        <h3>Objective:</h3>
+        <p>I am a CSE student from CEC and expecting a package of 8LPA.</p>
+      </div>
+      <div class="section">
+        <h3>Contact Details:</h3>
+        <p>Father's Name: K S Sreenivasan</p>
+        <p>Mother's Name: Sandhya</p>
+        <p>Date of Birth: 02/04/2004</p>
+        <p>Address: Alappuzha, Kerala</p>
+      </div>
+      <footer>
+        Copyright &copy; Sruthi K S
+      </footer>
+    </div>
+
+    <div id="resume" class="content">
+      <div class="profile">
+        <img src="image.jpg" alt="Profile Picture">
+        <h2>Sruthi K S</h2>
+      </div>
+      <h2>Resume</h2>
+      <div class="section">
+        <h3>Education Qualification:</h3>
+        <table>
+          <tr>
+            <th>Degree</th>
+            <th>Passing Year</th>
+            <th>Division</th>
+            <th>Institution Name</th>
+          </tr>
+          <tr>
+            <td>B.E.</td>
+            <td>Present</td>
+            <td>CSE C</td>
+            <td>CEC, Mangalore</td>
+          </tr>
+          <tr>
+            <td>12th</td>
+            <td>2020</td>
+            <td>C</td>
+            <td>Holy Family HSS, Cherthala</td>
+          </tr>
+          <tr>
+            <td>10th</td>
+            <td>2018</td>
+            <td>A</td>
+            <td>Bishop Moore Vidyapith, Cherthala</td>
+          </tr>
+        </table>
+      </div>
+      <div class="section">
+        <h3>Skills:</h3>
+        <ul>
+          <li>C Programming</li>
+          <li>Java</li>
+          <li>Machine Learning</li>
+          <li>Slide Presentation</li>
+          <li>HTML, CSS</li>
+        </ul>
+      </div>
+      <div class="section">
+        <h3>Interests:</h3>
+        <ul>
+          <li>Singing</li>
+          <li>Travelling</li>
+          <li>Photography</li>
+        </ul>
+      </div>
+      <footer>
+        Copyright &copy; Sruthi K S
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
